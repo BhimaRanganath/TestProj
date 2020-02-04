@@ -31,4 +31,4 @@ workflows:
   version: 2
   build_branch:
     jobs:
-      - checkout_repo
+      - run: echo "hello world" # run the `echo` command
