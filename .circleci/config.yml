@@ -1,9 +1,3 @@
-configure_machine: 1234
-  machine: true
-  environment:
-    _JAVA_OPTIONS: "-Xms512m -Xmx1024m"
-    GRADLE_OPTS: '-Dorg.gradle.jvmargs="-Xmx1024m -XX:+HeapDumpOnOutOfMemoryError"'
-    JAVA_HOME: "/usr/lib/jvm/java-8-openjdk-amd64"
 workflows:
   version: 2
   build_branch:
