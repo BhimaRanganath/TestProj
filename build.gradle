@@ -18,7 +18,7 @@ dependencies {
      testCompile("org.assertj:assertj-core:3.14.0")
 
     compile('org.hibernate:hibernate-validator:6.1.1.Final')
-     classpath("de.undercouch:gradle-download-task:4.0.2")
+     classpath("de.undercouch:gradle-download-task:4.0.1")
    
 
 }
