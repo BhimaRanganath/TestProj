@@ -10,6 +10,13 @@ checkout_all: &checkout_all
     command: |
       git fetch --depth=2147483647
       git fetch --tags
+checkout_repo:
+    <<: *configure_machine
+    steps:
+      - *checkout_all
+      - run:
+          name: Verifying commits follow semantic versioning
+          command: 'echo "hello world"'
 
 version: 2.1
 jobs:
@@ -19,13 +26,7 @@ jobs:
     steps:
       - checkout # check out the code in the project directory
       - run: echo "hello world" # run the `echo` command
-checkout_repo:
-    <<: *configure_machine
-    steps:
-      - *checkout_all
-      - run:
-          name: Verifying commits follow semantic versioning
-          command: 'echo "hello world"'
+
 workflows:
   version: 2
   build_branch:
