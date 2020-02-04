@@ -4,6 +4,13 @@ configure_machine: &configure_machine
     _JAVA_OPTIONS: "-Xms512m -Xmx1024m"
     GRADLE_OPTS: '-Dorg.gradle.jvmargs="-Xmx1024m -XX:+HeapDumpOnOutOfMemoryError"'
     JAVA_HOME: "/usr/lib/jvm/java-8-openjdk-amd64"
+checkout_all: &checkout_all
+  checkout:
+    name: Checkout With all Submodules and Tags
+    command: |
+      git fetch --depth=2147483647
+      git fetch --tags
+
 version: 2.1
 jobs:
   build:
