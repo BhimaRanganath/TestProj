@@ -25,6 +25,7 @@ checkout_repo:
       - *checkout_all
       - run:
           name: Verifying commits follow semantic versioning
+          command: 'echo "hello world"'
 workflows:
   version: 2
   build_branch:
