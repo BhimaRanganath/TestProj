@@ -6,11 +6,10 @@ update_configs:
     update_schedule: "daily"
     automerged_updates:
       - match:
-          dependency_type: "development"
-          # Supported dependency types:
-          # - "development"
-          # - "production"
-          # - "all"
-          update_type: "all"
+          dependency_name: "puma"
+          update_type: "semver:minor"
+      - match:
+          # Wildcards match unlimited arbitrary characters (or none)
+          dependency_name: "rspec*"
     commit_message:
       prefix: "chore"
