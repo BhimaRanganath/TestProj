@@ -7,7 +7,7 @@ update_configs:
     automerged_updates:
       - match:
           dependency_name: "puma"
-          update_type: "semver:minor"
+          update_type: "de.undercouch:gradle-download-task"
       - match:
           # Wildcards match unlimited arbitrary characters (or none)
           dependency_name: "rspec*"
