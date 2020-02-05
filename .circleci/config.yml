@@ -1,7 +1,9 @@
-regression_centoscore_QA:
-    steps:
-      - checkout # check out the code in the project directory
-      - run: echo "hello world" # run the `echo` command
+version: 2
+jobs:
+    regression_centoscore_QA:
+        steps:
+            - checkout # check out the code in the project directory
+            - run: echo "hello world" # run the `echo` command
 workflows:
     version: 2
     regression:
