@@ -22,5 +22,4 @@ workflows:
   version: 2
   testBuild:
     jobs:
-      - build     
       - run_feature_tests
