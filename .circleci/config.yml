@@ -1,13 +1,17 @@
+configure_machine: &configure_machine
+  machine: true
+  environment:
+    _JAVA_OPTIONS: "-Xms512m -Xmx1024m"
+    GRADLE_OPTS: '-Dorg.gradle.jvmargs="-Xmx1024m -XX:+HeapDumpOnOutOfMemoryError"'
+    JAVA_HOME: "/usr/lib/jvm/java-8-openjdk-amd64"
+
 version: 2
 jobs:
     regression_centoscore_QA:
-        docker:
-      # specify the version you desire here
-      # - image: circleci/openjdk:8-jdk
-            - image: circleci/openjdk:8-jdk-browsers
-        steps:
-            - checkout # check out the code in the project directory
-            - run: echo "hello world" # run the `echo` command
+       <<: *configure_machine
+    steps:
+      - checkout # check out the code in the project directory
+      - run: echo "hello world" # run the `echo` command
     run_feature_tests:
         docker:
       # specify the version you desire here
