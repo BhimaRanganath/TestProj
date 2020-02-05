@@ -8,10 +8,10 @@ configure_machine: &configure_machine
 version: 2
 jobs:
     regression_centoscore_QA:
-       <<: *configure_machine
-    steps:
-      - checkout # check out the code in the project directory
-      - run: echo "hello world" # run the `echo` command
+      <<: *configure_machine
+      steps:
+        - checkout # check out the code in the project directory
+        - run: echo "hello world" # run the `echo` command
     run_feature_tests:
         docker:
       # specify the version you desire here
