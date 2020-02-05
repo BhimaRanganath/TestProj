@@ -21,7 +21,7 @@ jobs:
               fingerprints:
                 - "8b:10:7c:49:05:c3:a0:95:ba:7b:38:29:bc:47:6f:7d"
           - run:
-              name: Clone frontend repository
+              name: Clone Comply QAF
               command: >-
                 GIT_SSH_COMMAND='ssh -i ~/.ssh/id_rsa_fingerprint'
                 git clone git@github.com:dequelabs/qa_comply_daf.git ~/TEST    
