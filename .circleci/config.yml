@@ -20,13 +20,13 @@ jobs:
             at: ~/TEST
         - add_ssh_keys:
             fingerprints:
-              - "4b:87:63:47:76:94:d8:e7:71:56:34:1e:2d:d7:30:3a"
+              - "1a:8c:49:ef:cc:9c:ad:f3:ec:00:fd:0c:9e:47:a2:8b"
  
         - run:
             name: Clone Comply QAF
             command: >-
               GIT_SSH_COMMAND='ssh -i ~/.ssh/id_rsa_fingerprint'
-              git clone git@github.com:dequelabs/qa_comply_daf.git ~/TEST 
+              git clone git@github.com:BhimaRanganath/TestRepo.git ~/TEST 
 workflows:
     version: 2
     regression:
