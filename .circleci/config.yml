@@ -18,9 +18,6 @@ jobs:
         - checkout
         - attach_workspace:
             at: ~/TEST
-        - add_ssh_keys:
-            fingerprints:
-              - "1a:8c:49:ef:cc:9c:ad:f3:ec:00:fd:0c:9e:47:a2:8a"
         - run:
             name: Clone Comply QAF
             command: >-
