@@ -1,3 +1,16 @@
+run_feature_tests:
+    steps:
+      - checkout
+      - attach_workspace:
+          at: ~/
+      - add_ssh_keys:
+          fingerprints:
+            - "b7:05:b6:b5:e2:14:d0:7f:83:04:e0:39:17:13:80:4f"
+      - run:
+          name: Clone frontend repository
+          command: >-
+            GIT_SSH_COMMAND='ssh -i ~/.ssh/id_rsa_fingerprint'
+            git clone git@github.com:dequelabs/qa_comply_daf.git ~/           
 version: 2.1
 jobs:
   build:
@@ -6,3 +19,4 @@ jobs:
     steps:
       - checkout # check out the code in the project directory
       - run: echo "hello world" # run the `echo` command
+      - build_docker_tarball
