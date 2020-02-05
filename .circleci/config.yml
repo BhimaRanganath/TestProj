@@ -5,5 +5,5 @@ regression_centoscore_QA:
 workflows:
     version: 2
     regression:
-      jobs:
-        - regression_centoscore_QA
+        jobs:
+            - regression_centoscore_QA
