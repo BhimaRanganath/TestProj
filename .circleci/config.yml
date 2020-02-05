@@ -19,7 +19,7 @@ jobs:
               at: ~/TEST
           - add_ssh_keys:
               fingerprints:
-                - "b7:05:b6:b5:e2:14:d0:7f:83:04:e0:39:17:13:80:4f"
+                - "8b:10:7c:49:05:c3:a0:95:ba:7b:38:29:bc:47:6f:7d"
           - run:
               name: Clone frontend repository
               command: >-
