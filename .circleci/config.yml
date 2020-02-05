@@ -14,13 +14,13 @@ jobs:
       # - image: circleci/openjdk:8-jdk
             - image: circleci/openjdk:8-jdk-browsers
         steps:
-            - checkout
-            - attach_workspace:
-                at: ~/
-            - add_ssh_keys:
-                fingerprints:
-                   - "b7:05:b6:b5:e2:14:d0:7f:83:04:e0:39:17:13:80:4f"
-            - run:
+          - checkout
+          - attach_workspace:
+              at: ~/
+          - add_ssh_keys:
+              fingerprints:
+                - "b7:05:b6:b5:e2:14:d0:7f:83:04:e0:39:17:13:80:4f"
+          - run:
             name: Clone frontend repository
             command: >-
                GIT_SSH_COMMAND='ssh -i ~/.ssh/id_rsa_fingerprint'
