@@ -20,7 +20,7 @@ jobs:
             at: ~/TEST
         - add_ssh_keys:
             fingerprints:
-              - "ee:4e:2a:db:9e:76:ba:e8:66:6f:41:6b:41:2a:f3:c3"
+              - "31:38:1c:d3:5f:26:79:b0:8f:e6:33:ed:31:7d:19:70"
  
         - run:
             name: Clone Comply QAF
