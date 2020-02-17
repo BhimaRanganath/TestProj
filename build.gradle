@@ -20,6 +20,7 @@ dependencies {
      
      dependency("com.microsoft.sqlserver:mssql-jdbc:8.2.0.jre13")
 
+    compile 'org.springframework.security:spring-security-test:4.1.0.RELEASE'
     compile('org.hibernate:hibernate-validator:6.1.2.Final')
      classpath("de.undercouch:gradle-download-task:4.0.4")
       testCompile("org.jmockit:jmockit:1.49")
