@@ -16,7 +16,7 @@ dependencies {
 
     compile group: 'net.lightbody.bmp', name: 'browsermob-core', version: '2.1.5'
     
-     testCompile("org.assertj:assertj-core:3.15.0")
+     testCompile("org.assertj:assertj-core:3.18.1")
      
      dependency("com.microsoft.sqlserver:mssql-jdbc:8.2.0.jre13")
 
