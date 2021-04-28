@@ -1,0 +1,18 @@
+version: 2
+updates:
+- package-ecosystem: gradle
+  directory: "/"
+  schedule:
+    interval: daily
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: org.springframework.security:spring-security-test
+    versions:
+    - 5.4.2
+    - 5.4.4
+    - 5.4.5
+  - dependency-name: org.hibernate:hibernate-validator
+    versions:
+    - 7.0.0.Final
+  commit-message:
+    prefix: chore
